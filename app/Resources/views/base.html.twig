@@ -3,8 +3,8 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <title>{% block title %}{% if title is defined %}{{ title }} - {% endif %}Tyler Sommer dot com{% endblock %}</title>
-        <link href="//fonts.googleapis.com/css?family=Open+Sans:400,300|Lobster+Two:400,700|Inconsolata:400,700" rel="stylesheet" type="text/css">
+        <title>{% block title %}{% if title is defined %}{{ title }} - {% endif %}Allie Jewel{% endblock %}</title>
+        <link href="//fonts.googleapis.com/css?family=Courgette:400,700|Playfair+Display|Inconsolata:400,700" rel="stylesheet" type="text/css">
         <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
         {% block stylesheets %}
             {% stylesheets filter='cssrewrite, ?yui_css' output="css/application.css"
@@ -12,7 +12,7 @@
                 'bundles/veonikblog/css/bootstrap-responsive.css'
                 'bundles/veonikblog/css/select2.css'
                 'bundles/veonikblog/css/bootstrap-datepicker.css'
-                'bundles/veonikblog/css/application.css'
+                'bundles/tylersommerblog/css/application.css'
             %}
         <link rel="stylesheet" href="{{ asset_url }}" />
             {% endstylesheets %}
@@ -24,8 +24,8 @@
         <div class="navbar navbar-static-top">
             <div class="navbar-inner">
                 <div class="container">
-                    <a class="brand" href="{{ path('home') }}">Tyler Sommer dot com</a>
-                    <a class="small-brand" href="{{ path('home') }}">ts</a>
+                    <a class="brand" href="{{ path('home') }}">Allie Jewel</a>
+                    <a class="small-brand" href="{{ path('home') }}">a</a>
                     {{ render_menu('main_nav') }}
                 </div>
             </div>
@@ -33,7 +33,7 @@
         <div id="main" class="container container-fluid">
             {% block container %}
             <div class="row-fluid">
-            <div class="span9 content-box">
+            <div class="span12 content-box">
                 {% if app.session.flashBag.has('success') %}
                     <div class="alert alert-success">
                         {{ app.session.flashBag.get('success')[0] }}
@@ -50,11 +50,6 @@
                     </div>
                 {% endif %}
                 {% block content %}
-                {% endblock %}
-            </div>
-            <div class="span3">
-                {% block right_side %}
-                {{ render(controller('VeonikBlogBundle:Home:rightSide')) }}
                 {% endblock %}
             </div>
             </div>

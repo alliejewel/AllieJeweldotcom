@@ -42,6 +42,9 @@ assetic:
 doctrine:
   dbal:
     driver:   %database_driver%
+    driver_class: TylerSommer\Bundle\BlogBundle\DBAL\PgSqlDriver
+    options:
+      schema: blog
     host:     %database_host%
     port:     %database_port%
     dbname:   %database_name%
@@ -84,10 +87,10 @@ swiftmailer:
 hwi_oauth:
   firewall_name: user_area
   resource_owners:
-    github:
-      type:           github
-      client_id:      %github_client_id%
-      client_secret:  %github_client_secret%
+    instagram:
+      type:           instagram
+      client_id:      %instagram_client_id%
+      client_secret:  %instagram_client_secret%
     twitter:
       type:           twitter
       client_id:      %twitter_client_id%

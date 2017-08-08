@@ -1,6 +1,6 @@
 {
-  "name": "tyler-sommer/blog",
-  "description": "Tyler Sommer's Blog",
+  "name": "allie-jewel/blog",
+  "description": "Allie Jewel's Blog",
   "autoload": {
     "psr-0": { "": "src/" }
   },

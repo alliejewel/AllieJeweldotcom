@@ -14,8 +14,8 @@ parameters:
     locale:            en
     secret:            ThisTokenIsNotSoSecretChangeIt
 
-    github_client_id:
-    github_client_secret:
+    instagram_client_id:
+    instagram_client_secret:
 
     twitter_client_id:
     twitter_client_secret:
